@@ -42,4 +42,4 @@ Full endpoint reference and guides: [api.kicks.dev/docs](https://api.kicks.dev/d
 
 ## License
 
-MIT © 2026 [KicksDB](https://www.google.com/search?q=https://kicksdb.com)
+MIT © 2026 [KicksDB](https://kicks.dev)
