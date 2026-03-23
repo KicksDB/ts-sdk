@@ -8,6 +8,9 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "url": "https://github.com/sneakersAPI/ts-sdk"
+  },
   "scripts": {
     "generate": "openapi-ts",
     "build": "tsup",
