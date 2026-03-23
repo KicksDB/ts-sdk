@@ -98,25 +98,6 @@ export type Gtin = {
     variant_id: string;
 };
 
-export type GetDailySnapshotCsvOutput = {
-    /**
-     * The URL to download the file.
-     */
-    download_url: string;
-    /**
-     * The time the download URL expires in Unix timestamp.
-     */
-    expires_at: bigint;
-    /**
-     * The name of the file.
-     */
-    file_name: string;
-    /**
-     * The size of the file in bytes.
-     */
-    size_bytes: bigint;
-};
-
 export type GetPricesInputBody = {
     /**
      * A URL to the JSON Schema for this object.
@@ -377,15 +358,6 @@ export type RespAliasRecentOrdersRequestOutputBody = {
      */
     readonly $schema?: string;
     data: unknown;
-    meta: unknown;
-};
-
-export type RespGetDailySnapshotCsvOutputBody = {
-    /**
-     * A URL to the JSON Schema for this object.
-     */
-    readonly $schema?: string;
-    data: GetDailySnapshotCsvOutput;
     meta: unknown;
 };
 
@@ -1331,11 +1303,6 @@ export type RespAliasRecentOrdersRequestOutputBodyWritable = {
     meta: unknown;
 };
 
-export type RespGetDailySnapshotCsvOutputBodyWritable = {
-    data: GetDailySnapshotCsvOutput;
-    meta: unknown;
-};
-
 export type RespGoatProductBodyWritable = {
     data: GoatProduct;
     meta: unknown;
@@ -1480,44 +1447,6 @@ export type RespStockXProductsRequestOutputBodyWritable = {
     data: unknown;
     meta: unknown;
 };
-
-export type GetDailySnapshotCsvData = {
-    body?: never;
-    path?: never;
-    query: {
-        /**
-         * The market to use.
-         */
-        market: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered';
-        /**
-         * The date to get the snapshot for, defaults to today.
-         */
-        date?: Date;
-        /**
-         * The platform to use.
-         */
-        platform: 'stockx';
-    };
-    url: '/v3/exports/daily';
-};
-
-export type GetDailySnapshotCsvErrors = {
-    /**
-     * Error
-     */
-    default: ErrorModel;
-};
-
-export type GetDailySnapshotCsvError = GetDailySnapshotCsvErrors[keyof GetDailySnapshotCsvErrors];
-
-export type GetDailySnapshotCsvResponses = {
-    /**
-     * OK
-     */
-    200: RespGetDailySnapshotCsvOutputBody;
-};
-
-export type GetDailySnapshotCsvResponse = GetDailySnapshotCsvResponses[keyof GetDailySnapshotCsvResponses];
 
 export type GetGoatProductsData = {
     body?: never;

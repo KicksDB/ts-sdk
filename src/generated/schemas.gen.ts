@@ -327,46 +327,6 @@ export const GTINSchema = {
     type: 'object'
 } as const;
 
-export const GetDailySnapshotCSVOutputSchema = {
-    additionalProperties: false,
-    properties: {
-        download_url: {
-            description: 'The URL to download the file.',
-            type: 'string'
-        },
-        expires_at: {
-            description: 'The time the download URL expires in Unix timestamp.',
-            examples: [
-                1768057362
-            ],
-            format: 'int64',
-            type: 'integer'
-        },
-        file_name: {
-            description: 'The name of the file.',
-            examples: [
-                'US-2026-01-01.csv'
-            ],
-            type: 'string'
-        },
-        size_bytes: {
-            description: 'The size of the file in bytes.',
-            examples: [
-                14888960
-            ],
-            format: 'int64',
-            type: 'integer'
-        }
-    },
-    required: [
-        'file_name',
-        'size_bytes',
-        'download_url',
-        'expires_at'
-    ],
-    type: 'object'
-} as const;
-
 export const GetPricesInputBodySchema = {
     additionalProperties: false,
     properties: {
@@ -1275,30 +1235,6 @@ export const RespAliasRecentOrdersRequestOutputBodySchema = {
             type: 'string'
         },
         data: {},
-        meta: {}
-    },
-    required: [
-        'data',
-        'meta'
-    ],
-    type: 'object'
-} as const;
-
-export const RespGetDailySnapshotCSVOutputBodySchema = {
-    additionalProperties: false,
-    properties: {
-        $schema: {
-            description: 'A URL to the JSON Schema for this object.',
-            examples: [
-                'https://api.kicks.dev//schemas/RespGetDailySnapshotCSVOutputBody.json'
-            ],
-            format: 'uri',
-            readOnly: true,
-            type: 'string'
-        },
-        data: {
-            $ref: '#/components/schemas/GetDailySnapshotCSVOutput'
-        },
         meta: {}
     },
     required: [
@@ -3711,21 +3647,6 @@ export const RespAliasRecentOrdersRequestOutputBodyWritableSchema = {
     additionalProperties: false,
     properties: {
         data: {},
-        meta: {}
-    },
-    required: [
-        'data',
-        'meta'
-    ],
-    type: 'object'
-} as const;
-
-export const RespGetDailySnapshotCSVOutputBodyWritableSchema = {
-    additionalProperties: false,
-    properties: {
-        data: {
-            $ref: '#/components/schemas/GetDailySnapshotCSVOutput'
-        },
         meta: {}
     },
     required: [
