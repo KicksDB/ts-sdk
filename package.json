@@ -1,0 +1,21 @@
+{
+  "name": "@kicksdb/sdk",
+  "version": "1.0.7",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "generate": "openapi-ts",
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@hey-api/openapi-ts": "0.94.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
