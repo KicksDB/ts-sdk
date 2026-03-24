@@ -123,7 +123,6 @@ const novelshipProductSchemaResponseTransformer = (data: any) => {
         });
     }
     data.id = BigInt(data.id.toString());
-    data.updated_at = new Date(data.updated_at);
     if (data.variants) {
         data.variants = data.variants.map((item: any) => novelshipProductVariantSchemaResponseTransformer(item));
     }

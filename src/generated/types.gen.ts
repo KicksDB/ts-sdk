@@ -327,7 +327,6 @@ export type NovelshipProduct = {
     season: string;
     sku: string;
     slug: string;
-    updated_at: Date;
     variants: Array<NovelshipProductVariant> | null;
     weight: bigint;
 };

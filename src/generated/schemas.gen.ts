@@ -1082,10 +1082,6 @@ export const NovelshipProductSchema = {
         slug: {
             type: 'string'
         },
-        updated_at: {
-            format: 'date-time',
-            type: 'string'
-        },
         variants: {
             items: {
                 $ref: '#/components/schemas/NovelshipProductVariant'
@@ -1121,8 +1117,7 @@ export const NovelshipProductSchema = {
         'link',
         'retail_price',
         'release_date',
-        'variants',
-        'updated_at'
+        'variants'
     ],
     type: 'object'
 } as const;
