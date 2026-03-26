@@ -355,7 +355,8 @@ export const GetPricesInputBodySchema = {
                 'FI',
                 'BE.vat-registered',
                 'FI.vat-registered',
-                'NL.vat-registered'
+                'NL.vat-registered',
+                'EU'
             ],
             type: 'string'
         },
@@ -3590,7 +3591,8 @@ export const GetPricesInputBodyWritableSchema = {
                 'FI',
                 'BE.vat-registered',
                 'FI.vat-registered',
-                'NL.vat-registered'
+                'NL.vat-registered',
+                'EU'
             ],
             type: 'string'
         },

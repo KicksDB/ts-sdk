@@ -106,7 +106,7 @@ export type GetPricesInputBody = {
     /**
      * The market to use for price retrieval
      */
-    market: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered';
+    market: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered' | 'EU';
     /**
      * The product IDs to get prices for. At least one of skus or product_ids is required.
      */
@@ -1282,7 +1282,7 @@ export type GetPricesInputBodyWritable = {
     /**
      * The market to use for price retrieval
      */
-    market: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered';
+    market: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered' | 'EU';
     /**
      * The product IDs to get prices for. At least one of skus or product_ids is required.
      */
@@ -2075,7 +2075,7 @@ export type GetShopifyProductsData = {
         query?: string;
         shop_name?: string;
         filters?: string;
-        sort?: 'updated_at:desc' | 'updated_at:asc' | 'published_at:desc' | 'published_at:asc' | 'cursor:desc' | 'cursor:asc';
+        sort?: 'updated_at:asc' | 'updated_at:desc' | 'published_at:asc' | 'published_at:desc' | 'id:asc' | 'id:desc';
         /**
          * Limited to 50 pages, use 'filters' with 'id > [last_id]' and sort 'id:asc' instead
          */
@@ -2268,7 +2268,7 @@ export type GetStockxProductsData = {
         /**
          * The market to use for price retrieval
          */
-        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered';
+        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered' | 'EU';
     };
     url: '/v3/stockx/products';
 };
@@ -2323,7 +2323,7 @@ export type GetStockxProductData = {
         /**
          * The market to use for price retrieval
          */
-        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered';
+        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered' | 'EU';
     };
     url: '/v3/stockx/products/{id}';
 };
@@ -2362,7 +2362,7 @@ export type GetStockxProductSalesData = {
         /**
          * Only US and DE are available on this endpoint
          */
-        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered';
+        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered' | 'EU';
         /**
          * The number of sales to return.
          */
@@ -2405,7 +2405,7 @@ export type GetStockxProductSalesDailyData = {
         /**
          * Only US and DE are available on this endpoint
          */
-        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered';
+        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered' | 'EU';
         /**
          * The number of days to return.
          */
@@ -2485,7 +2485,7 @@ export type GetProductsByIdentifierData = {
         /**
          * The market to use, some markets might be unavailable depending on the source.
          */
-        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered';
+        market?: 'US' | 'UK' | 'DE' | 'FR' | 'NL' | 'CH' | 'IT' | 'DK' | 'PL' | 'FI' | 'BE.vat-registered' | 'FI.vat-registered' | 'NL.vat-registered' | 'EU';
         /**
          * Similarity threshold, from 0 to 1, 0.85 is recommended
          */
