@@ -4,10 +4,6 @@ export type ClientOptions = {
     baseUrl: 'https://api.kicks.dev/' | (string & {});
 };
 
-export type AssociatedVariantStruct = {
-    id: string;
-};
-
 export type Brand = {
     brand: string;
     count: bigint;
@@ -181,7 +177,7 @@ export type GoatProductSaleAgg = {
 };
 
 export type GoatProductsResponse = {
-    products: Array<unknown> | null;
+    products: unknown;
     total: bigint;
 };
 
@@ -536,15 +532,6 @@ export type RespListStockXProductBody = {
     meta: unknown;
 };
 
-export type RespListStockXProductSalesEdgeBody = {
-    /**
-     * A URL to the JSON Schema for this object.
-     */
-    readonly $schema?: string;
-    data: Array<StockXProductSalesEdge> | null;
-    meta: unknown;
-};
-
 export type RespListUnifiedProductBody = {
     /**
      * A URL to the JSON Schema for this object.
@@ -596,6 +583,15 @@ export type RespStockXProductRequestOutputBody = {
      */
     readonly $schema?: string;
     data: unknown;
+    meta: unknown;
+};
+
+export type RespStockXProductSalesEdgeBody = {
+    /**
+     * A URL to the JSON Schema for this object.
+     */
+    readonly $schema?: string;
+    data: Array<unknown> | null;
     meta: unknown;
 };
 
@@ -1042,17 +1038,6 @@ export type StockXProduct = {
     weekly_orders: number;
 };
 
-export type StockXProductSalesEdge = {
-    cursor: string;
-    node: StockXProductSalesEdgeNodeStruct;
-};
-
-export type StockXProductSalesEdgeNodeStruct = {
-    amount: bigint;
-    associatedVariant: AssociatedVariantStruct;
-    createdAt: string;
-};
-
 export type StockXProductTrait = {
     trait: string;
     value: string;
@@ -1397,11 +1382,6 @@ export type RespListStockXProductBodyWritable = {
     meta: unknown;
 };
 
-export type RespListStockXProductSalesEdgeBodyWritable = {
-    data: Array<StockXProductSalesEdge> | null;
-    meta: unknown;
-};
-
 export type RespListUnifiedProductBodyWritable = {
     data: Array<UnifiedProduct> | null;
     meta: unknown;
@@ -1429,6 +1409,11 @@ export type RespStockXProductBodyWritable = {
 
 export type RespStockXProductRequestOutputBodyWritable = {
     data: unknown;
+    meta: unknown;
+};
+
+export type RespStockXProductSalesEdgeBodyWritable = {
+    data: Array<unknown> | null;
     meta: unknown;
 };
 
@@ -1691,6 +1676,10 @@ export type GetNovelshipProductsData = {
          * Only GBP is supported on this endpoint
          */
         currency?: 'USD' | 'EUR' | 'GBP' | 'CHF' | 'CAD' | 'JPY' | 'DKK';
+        /**
+         * Number of products to retrieve
+         */
+        limit?: bigint;
     };
     url: '/v3/novelship/products';
 };
@@ -1878,7 +1867,7 @@ export type GetStockxProductsRealtimeData = {
     path?: never;
     query: {
         query: string;
-        page?: bigint;
+        page?: number;
         currency?: string;
         country?: string;
     };
@@ -2030,7 +2019,7 @@ export type GetStockxProductSalesRealtimeResponses = {
     /**
      * OK
      */
-    200: RespListStockXProductSalesEdgeBody;
+    200: RespStockXProductSalesEdgeBody;
 };
 
 export type GetStockxProductSalesRealtimeResponse = GetStockxProductSalesRealtimeResponses[keyof GetStockxProductSalesRealtimeResponses];

@@ -2,7 +2,7 @@
 
 import { client } from './client.gen.js';
 import type { Client, Options as Options2, TDataShape } from './client/index.js';
-import { getBrandsResponseTransformer, getGoatProductResponseTransformer, getGoatProductSalesDailyResponseTransformer, getGoatProductSalesResponseTransformer, getGoatProductsRealtimeResponseTransformer, getGoatProductsResponseTransformer, getGtinsResponseTransformer, getKreamProductResponseTransformer, getKreamProductsResponseTransformer, getNovelshipProductsResponseTransformer, getProductsByIdentifierResponseTransformer, getShopifyProductResponseTransformer, getShopifyProductsResponseTransformer, getShopifyShopsResponseTransformer, getSnkrsProductsResponseTransformer, getStockxProductResponseTransformer, getStockxProductSalesDailyResponseTransformer, getStockxProductSalesRealtimeResponseTransformer, getStockxProductSalesResponseTransformer, getStockxProductsResponseTransformer } from './transformers.gen.js';
+import { getBrandsResponseTransformer, getGoatProductResponseTransformer, getGoatProductSalesDailyResponseTransformer, getGoatProductSalesResponseTransformer, getGoatProductsRealtimeResponseTransformer, getGoatProductsResponseTransformer, getGtinsResponseTransformer, getKreamProductResponseTransformer, getKreamProductsResponseTransformer, getNovelshipProductsResponseTransformer, getProductsByIdentifierResponseTransformer, getShopifyProductResponseTransformer, getShopifyProductsResponseTransformer, getShopifyShopsResponseTransformer, getSnkrsProductsResponseTransformer, getStockxProductResponseTransformer, getStockxProductSalesDailyResponseTransformer, getStockxProductSalesResponseTransformer, getStockxProductsResponseTransformer } from './transformers.gen.js';
 import type { GetAliasRecentOrdersRealtimeData, GetAliasRecentOrdersRealtimeErrors, GetAliasRecentOrdersRealtimeResponses, GetBrandsData, GetBrandsErrors, GetBrandsResponses, GetGoatProductData, GetGoatProductErrors, GetGoatProductOffersRealtimeData, GetGoatProductOffersRealtimeErrors, GetGoatProductOffersRealtimeResponses, GetGoatProductRealtimeData, GetGoatProductRealtimeErrors, GetGoatProductRealtimeResponses, GetGoatProductResponses, GetGoatProductSalesDailyData, GetGoatProductSalesDailyErrors, GetGoatProductSalesDailyResponses, GetGoatProductSalesData, GetGoatProductSalesErrors, GetGoatProductSalesRealtimeData, GetGoatProductSalesRealtimeErrors, GetGoatProductSalesRealtimeResponses, GetGoatProductSalesResponses, GetGoatProductsData, GetGoatProductsErrors, GetGoatProductsRealtimeData, GetGoatProductsRealtimeErrors, GetGoatProductsRealtimeResponses, GetGoatProductsResponses, GetGtinsData, GetGtinsErrors, GetGtinsResponses, GetKreamProductData, GetKreamProductErrors, GetKreamProductResponses, GetKreamProductsData, GetKreamProductsErrors, GetKreamProductsResponses, GetNovelshipProductsData, GetNovelshipProductsErrors, GetNovelshipProductsResponses, GetProductsByIdentifierData, GetProductsByIdentifierErrors, GetProductsByIdentifierResponses, GetShopifyProductData, GetShopifyProductErrors, GetShopifyProductResponses, GetShopifyProductsData, GetShopifyProductsErrors, GetShopifyProductsResponses, GetShopifyShopsData, GetShopifyShopsErrors, GetShopifyShopsResponses, GetSnkrsProductsData, GetSnkrsProductsErrors, GetSnkrsProductsResponses, GetStockxPricesData, GetStockxPricesErrors, GetStockxPricesResponses, GetStockxProductAsksRealtimeData, GetStockxProductAsksRealtimeErrors, GetStockxProductAsksRealtimeResponses, GetStockxProductData, GetStockxProductErrors, GetStockxProductRealtimeData, GetStockxProductRealtimeErrors, GetStockxProductRealtimeResponses, GetStockxProductResponses, GetStockxProductSalesDailyData, GetStockxProductSalesDailyErrors, GetStockxProductSalesDailyResponses, GetStockxProductSalesData, GetStockxProductSalesErrors, GetStockxProductSalesRealtimeData, GetStockxProductSalesRealtimeErrors, GetStockxProductSalesRealtimeResponses, GetStockxProductSalesResponses, GetStockxProductsData, GetStockxProductsErrors, GetStockxProductsRealtimeData, GetStockxProductsRealtimeErrors, GetStockxProductsRealtimeResponses, GetStockxProductsRelatedRealtimeData, GetStockxProductsRelatedRealtimeErrors, GetStockxProductsRelatedRealtimeResponses, GetStockxProductsResponses, GetStockxProductSubtotalRealtimeData, GetStockxProductSubtotalRealtimeErrors, GetStockxProductSubtotalRealtimeResponses } from './types.gen.js';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean> = Options2<TData, ThrowOnError> & {
@@ -106,7 +106,7 @@ export const getNovelshipProducts = <ThrowOnError extends boolean = false>(optio
 /**
  * Get recent orders for a product from Alias in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getAliasRecentOrdersRealtime = <ThrowOnError extends boolean = false>(options: Options<GetAliasRecentOrdersRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetAliasRecentOrdersRealtimeResponses, GetAliasRecentOrdersRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
@@ -117,7 +117,7 @@ export const getAliasRecentOrdersRealtime = <ThrowOnError extends boolean = fals
 /**
  * Get products from Goat in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getGoatProductsRealtime = <ThrowOnError extends boolean = false>(options: Options<GetGoatProductsRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetGoatProductsRealtimeResponses, GetGoatProductsRealtimeErrors, ThrowOnError>({
     responseTransformer: getGoatProductsRealtimeResponseTransformer,
@@ -129,7 +129,7 @@ export const getGoatProductsRealtime = <ThrowOnError extends boolean = false>(op
 /**
  * Get a product from GOAT in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getGoatProductRealtime = <ThrowOnError extends boolean = false>(options: Options<GetGoatProductRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetGoatProductRealtimeResponses, GetGoatProductRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
@@ -140,7 +140,7 @@ export const getGoatProductRealtime = <ThrowOnError extends boolean = false>(opt
 /**
  * Get offers for a product from GOAT in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getGoatProductOffersRealtime = <ThrowOnError extends boolean = false>(options: Options<GetGoatProductOffersRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetGoatProductOffersRealtimeResponses, GetGoatProductOffersRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
@@ -151,7 +151,7 @@ export const getGoatProductOffersRealtime = <ThrowOnError extends boolean = fals
 /**
  * Get sales for a product from GOAT in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getGoatProductSalesRealtime = <ThrowOnError extends boolean = false>(options: Options<GetGoatProductSalesRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetGoatProductSalesRealtimeResponses, GetGoatProductSalesRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
@@ -162,7 +162,7 @@ export const getGoatProductSalesRealtime = <ThrowOnError extends boolean = false
 /**
  * Get products from StockX in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getStockxProductsRealtime = <ThrowOnError extends boolean = false>(options: Options<GetStockxProductsRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetStockxProductsRealtimeResponses, GetStockxProductsRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
@@ -173,7 +173,7 @@ export const getStockxProductsRealtime = <ThrowOnError extends boolean = false>(
 /**
  * Get a product from StockX in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getStockxProductRealtime = <ThrowOnError extends boolean = false>(options: Options<GetStockxProductRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetStockxProductRealtimeResponses, GetStockxProductRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
@@ -184,7 +184,7 @@ export const getStockxProductRealtime = <ThrowOnError extends boolean = false>(o
 /**
  * Get asks for a product from StockX in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getStockxProductAsksRealtime = <ThrowOnError extends boolean = false>(options: Options<GetStockxProductAsksRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetStockxProductAsksRealtimeResponses, GetStockxProductAsksRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
@@ -195,7 +195,7 @@ export const getStockxProductAsksRealtime = <ThrowOnError extends boolean = fals
 /**
  * Get related products for a product from StockX in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getStockxProductsRelatedRealtime = <ThrowOnError extends boolean = false>(options: Options<GetStockxProductsRelatedRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetStockxProductsRelatedRealtimeResponses, GetStockxProductsRelatedRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
@@ -206,10 +206,9 @@ export const getStockxProductsRelatedRealtime = <ThrowOnError extends boolean = 
 /**
  * Get sales for a product from StockX in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getStockxProductSalesRealtime = <ThrowOnError extends boolean = false>(options: Options<GetStockxProductSalesRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetStockxProductSalesRealtimeResponses, GetStockxProductSalesRealtimeErrors, ThrowOnError>({
-    responseTransformer: getStockxProductSalesRealtimeResponseTransformer,
     security: [{ name: 'Authorization', type: 'apiKey' }],
     url: '/v3/realtime/stockx/products/{id}/sales',
     ...options
@@ -218,7 +217,7 @@ export const getStockxProductSalesRealtime = <ThrowOnError extends boolean = fal
 /**
  * Get subtotal for a product from StockX in real-time
  *
- * Access to this endpoint is limited to Enterprise users only.
+ * Access to this endpoint is limited to Pro/Enterprise users only.
  */
 export const getStockxProductSubtotalRealtime = <ThrowOnError extends boolean = false>(options: Options<GetStockxProductSubtotalRealtimeData, ThrowOnError>) => (options.client ?? client).get<GetStockxProductSubtotalRealtimeResponses, GetStockxProductSubtotalRealtimeErrors, ThrowOnError>({
     security: [{ name: 'Authorization', type: 'apiKey' }],
