@@ -9,7 +9,7 @@
     "dist"
   ],
   "repository": {
-    "url": "https://github.com/SneakersAPI/ts-sdk"
+    "url": "https://github.com/KicksDB/ts-sdk"
   },
   "scripts": {
     "generate": "openapi-ts",
