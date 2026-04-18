@@ -591,7 +591,7 @@ export type RespStockXProductSalesEdgeBody = {
      * A URL to the JSON Schema for this object.
      */
     readonly $schema?: string;
-    data: Array<unknown> | null;
+    data: unknown;
     meta: unknown;
 };
 
@@ -1413,7 +1413,7 @@ export type RespStockXProductRequestOutputBodyWritable = {
 };
 
 export type RespStockXProductSalesEdgeBodyWritable = {
-    data: Array<unknown> | null;
+    data: unknown;
     meta: unknown;
 };
 

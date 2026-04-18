@@ -1934,13 +1934,7 @@ export const RespStockXProductSalesEdgeBodySchema = {
             readOnly: true,
             type: 'string'
         },
-        data: {
-            items: {},
-            type: [
-                'array',
-                'null'
-            ]
-        },
+        data: {},
         meta: {}
     },
     required: [
@@ -4051,13 +4045,7 @@ export const RespStockXProductRequestOutputBodyWritableSchema = {
 export const RespStockXProductSalesEdgeBodyWritableSchema = {
     additionalProperties: false,
     properties: {
-        data: {
-            items: {},
-            type: [
-                'array',
-                'null'
-            ]
-        },
+        data: {},
         meta: {}
     },
     required: [
